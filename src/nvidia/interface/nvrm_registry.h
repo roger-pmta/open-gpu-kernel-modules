@@ -1001,6 +1001,17 @@
 // If set, this will cause RM mark GPU as lost when it detects 0xFF from register
 // access.
 
+//
+// Type DWORD
+// Force external GPU mode, bypassing automatic Thunderbolt bridge detection.
+// Useful for Thunderbolt 4/5 enclosures not in the driver's approved bridge list.
+//
+// Encoding:
+//   0 (default) - use automatic eGPU detection
+//   1           - force GPU to be treated as external
+//
+#define NV_REG_STR_RM_FORCE_EXTERNAL_GPU                    "RmForceExternalGpu"
+
 #define NV_REG_STR_RM_BLACKLIST_ADDRESSES                "RmBlackListAddresses"
 // Type BINARY:
 // struct
